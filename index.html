@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MystiQ - Chat. Connect. Disappear.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="logo">MystiQ</h1>
+            <p class="tagline">Chat. Connect. Disappear.</p>
+            
+            <div class="typing-container">
+                <p class="typing-text" id="typingText"></p>
+            </div>
+            
+            <button class="cta-button" id="ctaButton">
+                <span>Get Early Access</span>
+            </button>
+            
+            <p class="exclusivity-text">College students only. Limited access.</p>
+        </div>
+        
+        <div class="pulse-bg"></div>
+    </section>
+
+    <!-- Curiosity Section -->
+    <section class="curiosity fade-in-up" id="curiositySection">
+        <div class="curiosity-content">
+            <div class="mystery-points">
+                <p class="mystery-point">No profiles.</p>
+                <p class="mystery-point">No filters.</p>
+                <p class="mystery-point">No history.</p>
+            </div>
+            
+            <div class="reveal-text" id="revealText">
+                <p>Real students. Real conversations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works fade-in-up">
+        <div class="work-items">
+            <div class="work-item">
+                <div class="work-icon">🕶️</div>
+                <h3>Anonymous</h3>
+                <p>No one knows who you are.</p>
+            </div>
+            
+            <div class="work-item">
+                <div class="work-icon">🎲</div>
+                <h3>Random</h3>
+                <p>You don't choose. MystiQ does.</p>
+            </div>
+            
+            <div class="work-item">
+                <div class="work-icon">🫥</div>
+                <h3>Ephemeral</h3>
+                <p>Disconnect once. It's gone forever.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exclusivity Trigger -->
+    <section class="exclusivity fade-in-up">
+        <div class="exclusivity-card">
+            <h2>Not everyone gets in.</h2>
+            <p>Access is unlocked only for verified college students.</p>
+            <small>Invites roll out in waves.</small>
+        </div>
+    </section>
+
+    <!-- Interactive Teaser -->
+    <section class="teaser fade-in-up" id="teaserSection">
+        <h2>"Would you dare to answer this?"</h2>
+        
+        <div class="question-card" id="questionCard">
+            <div class="blurred-question">
+                <p>"What's the one thing about college life you've never said out loud?"</p>
+            </div>
+            <button class="unlock-button" id="unlockButton">
+                <span>Answering unlocks early access</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="registration" id="registrationSection">
+        <div class="form-container">
+            <h2>Reserve Your Spot</h2>
+            
+            <form id="registrationForm">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="College Email" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" id="collegeName" name="collegeName" placeholder="College Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="number" id="age" name="age" placeholder="Age" min="18" required>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="ageConfirm" name="ageConfirm" required>
+                        <span>I am 18 or older</span>
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" id="city" name="city" placeholder="City" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" id="instagram" name="instagram" placeholder="Instagram (optional)">
+                </div>
+                
+                <div class="form-group" id="teaserAnswerGroup">
+                    <textarea id="teaserAnswer" name="teaserAnswer" placeholder="Your answer to unlock early access..." rows="4"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" id="referralCode" name="referralCode" placeholder="Referral code (optional)">
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="notifications" name="notifications" required>
+                        <span>Notify me when MystiQ opens</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-button" id="submitButton">
+                    <span>Reserve My Spot</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Success Message -->
+    <section class="success" id="successSection">
+        <div class="success-content">
+            <h2>You're in the queue.</h2>
+            <p>We'll notify you when it's your turn.</p>
+            
+            <div class="queue-info" id="queueInfo">
+                <p>Position: <span id="queuePosition">#</span></p>
+                <p>Total registered: <span id="totalUsers">#</span></p>
+            </div>
+            
+            <div class="referral-section" id="referralSection">
+                <h3>Want faster access?</h3>
+                <p>Invite 3 friends from your college.</p>
+                
+                <div class="referral-code">
+                    <p>Your code: <span id="userReferralCode"></span></p>
+                    <button type="button" id="copyCodeButton">Copy Code</button>
+                </div>
+                
+                <div class="referral-stats">
+                    <p>Friends invited: <span id="referralCount">0</span>/3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Screenshots don't exist here.<br>Stories don't leave this place.</p>
+            <p class="final-hook">MystiQ is not for everyone.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
