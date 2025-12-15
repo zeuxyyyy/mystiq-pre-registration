@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Add fetch for Node.js self-ping functionality
-const fetch = require('node-fetch');
+
 
 // Middleware
 app.use(cors());
@@ -20,9 +20,7 @@ let users = [];
 let userIdCounter = 1;
 
 // ===== SELF-PING FUNCTIONALITY =====
-const SELF_PING_INTERVAL = 10000; // 10 seconds
-let selfPingInterval;
-let appUrl;
+
 
 function getAppUrl() {
     // Try to detect the hosting platform and get the correct URL
